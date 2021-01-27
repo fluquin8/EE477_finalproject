@@ -1,0 +1,74 @@
+|flag_register
+q[0] << mux2_1:flag[0].m.in
+q[1] << mux2_1:flag[1].m.in
+q[2] << mux2_1:flag[2].m.in
+q[3] << mux2_1:flag[3].m.in
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+en => en.IN4
+reset => reset.IN4
+clk => clk.IN4
+
+
+|flag_register|mux2_1:flag[0].m
+sel => a1.IN0
+sel => a0.IN0
+in[0] => a0.IN1
+in[1] => a1.IN1
+out <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_register|D_FF:flag[0].ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_register|mux2_1:flag[1].m
+sel => a1.IN0
+sel => a0.IN0
+in[0] => a0.IN1
+in[1] => a1.IN1
+out <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_register|D_FF:flag[1].ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_register|mux2_1:flag[2].m
+sel => a1.IN0
+sel => a0.IN0
+in[0] => a0.IN1
+in[1] => a1.IN1
+out <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_register|D_FF:flag[2].ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+
+|flag_register|mux2_1:flag[3].m
+sel => a1.IN0
+sel => a0.IN0
+in[0] => a0.IN1
+in[1] => a1.IN1
+out <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flag_register|D_FF:flag[3].ff
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q.DATAA
+reset => q.OUTPUTSELECT
+clk => q~reg0.CLK
+
+

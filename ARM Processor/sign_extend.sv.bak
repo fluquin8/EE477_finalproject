@@ -1,0 +1,7 @@
+module sign_extend #(parameter width) (out, in);
+
+endmodule
+
+module sign_extend_testbench();
+
+endmodule

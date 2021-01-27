@@ -1,0 +1,9 @@
+module fulladder_64bit (A, B, carry_in, carry_out, sum);
+	input logic [63:0] A, B, carry_in;
+	output logic [63:0] carry_out, sum;
+	
+endmodule
+
+module fulladder_64bit_testbench();
+
+endmodule

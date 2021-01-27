@@ -1,0 +1,24 @@
+`timescale 1ns/10ps
+
+module cpustim();
+    logic clk, reset;
+
+    cpu dut (.reset, .clk);
+
+    parameter clock_period = 1600;
+
+    initial begin
+        clk <= 0;
+        forever #(clock_period / 2) clk <= ~clk;
+    end
+
+    integer i;
+	initial begin
+        reset <= 1; @(posedge clk);
+        reset <= 0; @(posedge clk);
+        for (i = 0; i < clock_period; i++) begin
+            @(posedge clk);
+        end
+        $stop;
+	end
+endmodule

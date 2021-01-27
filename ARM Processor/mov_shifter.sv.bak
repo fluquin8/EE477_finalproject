@@ -1,0 +1,11 @@
+`timescale 1ns/10ps
+
+module mov_shifter (out, imm, replacee, shift);
+	input logic [15:0] imm;
+	input logic [
+
+endmodule
+
+module mov_shifter_testbench();
+
+endmodule
